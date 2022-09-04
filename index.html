@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <title>Forza 4</title>
+        <script src="js/util.js"></script>
+
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>Forza 4!</h1>
+            <hr />
+
+            <span id="error"></span>
+
+            <span id="first_page">
+
+              <h2 class="d-inline-block">Player vs Player</h2>
+              <div class="text-right d-inline-block"> 
+                <input type="text" id="player1" placeholder="Giocatore 1" style="margin-right:20px;"/>
+                <input type="text" id="player2" placeholder="Giocatore 2" style="margin-right:20px;"/>
+                <a  class="btn btn-default" onclick="initPvpIndex();" id="button">Play!</a>
+              </div>
+
+              <br />
+              <hr />
+              <br />
+
+              <h2 class="d-inline-block">Player vs Bot</h2>
+              <div class="text-right d-inline-block">
+                <input type="text" id="player" placeholder="Giocatore 1" style="margin-right:20px;"/>
+                <a   class="btn btn-default" onclick="initPvbIndex();" id="button">Play!</a>
+              </div>
+
+              <br />
+              <hr />
+
+            </span>
+        </div>
+    </body>
+
+</html>
