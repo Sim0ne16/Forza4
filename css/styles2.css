@@ -41,12 +41,10 @@ html, body {
 .buttonsx:hover {
     background-color: #ffa500;
     color: #2000ffbf;
-    border-color: white;
-    border:solid;
 }
 
 .buttondx:hover {
-    background-color: #2000ffbf;
+    background-color: #645BFF;
     color: #ffa500;
 }
 
@@ -135,7 +133,7 @@ html, body {
     display: inline;
     position: absolute;
     top: 10%;
-    left: 42.7%;
+    left: 44.4%;
     text-align: center;
     font-size: 51px;
     color: white;
@@ -144,6 +142,7 @@ html, body {
     border: solid;
     padding: 10px;
 }
+
 .logo img{
     max-width: 100px;
 }
@@ -156,24 +155,14 @@ a{
     font-family: sans-serif;
 }
 #west{
-  /*  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/927610/ISSlRnm.png) no-repeat center right;*/
     background-size: cover;
     background-color: #2000ffbf;
 }
 #east{
-    /*
-    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/927610/man_guy_jumping_levitate_railing-1407739.jpg) no-repeat center bottom;
-    */
     background-size: cover;
    background-color: #ffa500;
 }
-/*#west .content{
-    background: rgba(70,181,84, .5);
-!*}
-#east .content{
-    background: rgba(207,172,49, .5);
 
-}*!*/
 /*-----------------*/
 /***** Hover *****/
 /*-----------------*/

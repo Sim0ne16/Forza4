@@ -168,6 +168,11 @@ Game.prototype.restartGame = function() {
 function initPvp() {
     document.getElementById("player1-name").innerHTML = localStorage.getItem('player1') + " score:";
     document.getElementById("player2-name").innerHTML = localStorage.getItem('player2') + " score:";
+
+    document.getElementById("player1-name1").innerHTML = "Pedina " + localStorage.getItem('player1') +":";
+    document.getElementById("player2-name1").innerHTML = "Pedina " + localStorage.getItem('player2') +":";
+
+
     window.Game = new Game();
 }
 

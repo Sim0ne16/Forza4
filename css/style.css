@@ -14,6 +14,17 @@ h1 {
     padding: 0;
 }
 
+#result-matches{
+    padding-top: 10px;
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+.pedina{
+    font-size: 18px;
+    font-weight: bolder;
+}
+
 #container {
     position: absolute;
     left: 50%;
@@ -159,7 +170,8 @@ h1 {
 
 #debug {
     margin-top: 10px;
-    font-size: 11px;
+    font-size: 16px;
+    font-weight:bolder;
 }
 
 .box-right {
@@ -173,9 +185,9 @@ h1 {
     float: left;
 }
 
-#options {
-    font-size: 13px;
-}
+
+
+
 
 input {
     border: 1px solid #808080;
@@ -261,10 +273,10 @@ select {
 .header-text {
     margin-bottom: 5px !important;
     margin-left: 2px !important;
-}
-
-.subheader-text {
-    margin-left: 3px !important;
+    border: solid;
+    margin-right: 29rem;
+    padding: 4px;
+    font-size:40px;
 }
 
 

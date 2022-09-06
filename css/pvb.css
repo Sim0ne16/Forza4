@@ -1,3 +1,133 @@
 body{
-    background-color: orange;
+    background-image: url('/img/background-4232859_1280.png');
+    background-size: cover;
 }
+
+*{
+    font-family: courier;
+}
+
+:root {
+    
+    --gray: #34495e;
+    --darkgray: #2c3e50;
+  }
+  
+  select {
+    /* Reset Select */
+    appearance: none;
+    outline: 0;
+    border: 0;
+    box-shadow: none;
+    /* Personalize */
+    flex: 1;
+    padding: 0 1em;
+    color: #fff;
+    background-color: var(--darkgray);
+    background-image: none;
+    cursor: pointer;
+  }
+  /* Remove IE arrow */
+  select::-ms-expand {
+    display: none;
+  }
+  /* Custom Select wrapper */
+  .select {
+    position: relative;
+    display: flex;
+    width: 20em;
+    height: 3em;
+    border-radius: .25em;
+  }
+  /* Transition */
+
+  #color-coins-human{
+    height: 2rem;
+    border-radius: 5px;
+  }
+  #color-coins-ai{
+    height: 2rem;
+    border-radius: 5px;
+  }
+
+  #color-coins-human:hover{
+    background-color: #2e3dac;
+  }
+
+  #color-coins-ai:hover{
+    background-color: #2e3dac;
+  }
+
+  #color-coins{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    top: 34rem;
+    position: absolute;
+    left: 44rem;
+  }
+  
+  .pedina{
+    display: flex;
+    align-items: center;
+  }
+
+  #difficulty{
+    margin-top:10px;
+    height: 2rem;
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  #difficulty:hover{
+    background-color: #2e3dac;
+  }
+
+  .button-29 {
+    align-items: center;
+    appearance: none;
+    background-image: radial-gradient(100% 100% at 100% 0, #0767a2 0, #2e3f65 100%);
+    border: 0;
+    border-radius: 6px;
+    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono",monospace;
+    height: 35px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 15px;
+  }
+
+  #btn2{
+    margin-top: 8px;
+  }
+  
+  .button-29:focus {
+    box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  }
+  
+  .button-29:hover {
+    box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+    transform: translateY(-2px);
+  }
+  
+  .button-29:active {
+    box-shadow: #3c4fe0 0 3px 7px inset;
+    transform: translateY(2px);
+  }

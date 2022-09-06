@@ -10,11 +10,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Forza 4</title>
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="/css/pvp.css">
   </head>
   <body>
     <div id="container">
       <h1 class="header-text">Forza 4</h1>
-      <p class="text subheader-text">Buona Fortuna!</p>
 
       <div class="box-left">
         <table id="game_board" cellpadding="0"></table>
@@ -23,25 +23,25 @@
       <div class="box-right">
         <div id="options">
           <p>
-            <button class="save" onclick="goHome()" type="submit">
+            <button class="button-29" onclick="goHome()" type="submit">
                 Esci
               </button>
-            <button class="save" onclick="Game.restartGame();" type="submit">
+            <button class="button-29" onclick="Game.restartGame();" type="submit">
               Ricomincia
             </button>
           </p>
         </div>
-      </div>
-      <div id="result-matches">
-        <p id="player1-name"></p>
-        <p id="player1-points">0</p>
-        <p>-------------</p>
-        <p  id="player2-name"></p>
-        <p id="player2-points">0</p>
+        <div id="result-matches">
+          <p id="player1-name"></p>
+          <p id="player1-points" style="font-size:25px">0</p>
+          <hr>
+          <p  id="player2-name"></p>
+          <p id="player2-points" style="font-size:25px">0</p>
+        </div>
       </div>
       <br><br><br>
-      <div id="color-coins">
-          <p>Pedina Giocatore:
+      <div id="color-coins" class="select">
+          <p class="pedina" id="player1-name1"></p>
               <select id="color-coins-human" onchange="changeColor()">
            <option value="#333">Default</option>
            <option value="-webkit-linear-gradient(left,red,orange,yellow,green,blue,indigo,violet)">Arcobaleno</option>
@@ -49,8 +49,8 @@
            <option value="radial-gradient(circle, red, yellow, green)">Circle</option>
            <option value="conic-gradient(red 0deg, red 90deg, yellow 90deg, yellow 180deg, green 180deg, green 270deg, blue 270deg)">Old Style</option>
            <option value="repeating-conic-gradient(red 0deg 10deg, yellow 10deg 20deg, blue 20deg 30deg)">Clown</option>
-          </select></p>
-          <p>Pedina AI:
+          </select>
+          <p class="pedina" id="player2-name1">  </p>
               <select  id="color-coins-ai"  onchange="changeColor()">
                   <option value="#DC143C">Default</option>
                   <option value="-webkit-linear-gradient(left,red,orange,yellow,green,blue,indigo,violet)">Arcobaleno</option>
@@ -58,7 +58,7 @@
                   <option value="conic-gradient(red 0deg, red 90deg, yellow 90deg, yellow 180deg, green 180deg, green 270deg, blue 270deg)">Old Style</option>
                   <option value="repeating-conic-gradient(red 0deg 10deg, yellow 10deg 20deg, blue 20deg 30deg)">Clown</option>
                  </select>
-          </p>
+        
          </div>
     </div>
 

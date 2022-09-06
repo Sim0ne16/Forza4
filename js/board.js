@@ -5,7 +5,7 @@
  * @this {Board}
  * @param {Game} game The main-game object. 
  * @param {array} field The field containing our situation.
- * @param {number} player The current player.
+* @param {number} player The current player.
  */
 function Board(game, field, player) {
     this.game = game
@@ -132,9 +132,9 @@ Board.prototype.score = function() {
     // [ ][x][x][ ][ ][ ][ ] 4
     // [ ][ ][x][ ][ ][ ][ ] 5
     for (var row = 0; row < this.game.rows - 3; row++) {
-        // Check every column
+        // Für jede Column überprüfen
         for (var column = 0; column < this.game.columns; column++) {
-            // Rate the column and add to the points
+            // Die Column bewerten und zu den Punkten hinzufügen
             var score = this.scorePosition(row, column, 1, 0);
             if (score == this.game.score) return this.game.score;
             if (score == -this.game.score) return -this.game.score;

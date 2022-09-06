@@ -275,6 +275,7 @@ Game.prototype.restartGame = function() {
  */
 function initPvb() {
     document.getElementById("player-name").innerHTML = localStorage.getItem('player') + " punteggio:";
+    document.getElementById("player-name2").innerHTML ="Pedina " + localStorage.getItem('player')+":";
     window.Game = new Game();
 }
 
