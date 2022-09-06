@@ -110,7 +110,7 @@ Game.prototype.updateStatus = function() {
         that.status = 1;
         that.markWin();
         let name1 = localStorage.getItem('player1')
-        alert(name1 +" win!");
+        alert(name1 +" vince! 🤩");
         var scoreTrack = parseInt(document.getElementById("player1-points").innerHTML);
         scoreTrack += 1;
         document.getElementById("player1-points").innerHTML = scoreTrack;
@@ -121,7 +121,7 @@ Game.prototype.updateStatus = function() {
         that.status = 2;
         that.markWin();
         let name2 = localStorage.getItem('player2')
-        alert( name2 + " win!");
+        alert( name2 + " vince! 🤩");
         var scoreTrack = parseInt(document.getElementById("player2-points").innerHTML);
         scoreTrack += 1;
         document.getElementById("player2-points").innerHTML = scoreTrack;
@@ -130,22 +130,18 @@ Game.prototype.updateStatus = function() {
     // Tie
     if (that.board.isFull()) {
         that.status = 3;
-        alert("Tie!");
+        alert("Pareggio! 🙄");
     }
 
     var html = document.getElementById('status');
     if (that.status == 0) {
         html.className = "status-running";
-        html.innerHTML = "running";
     } else if (that.status == 1) {
         html.className = "status-won";
-        html.innerHTML = "won";
     } else if (that.status == 2) {
         html.className = "status-lost";
-        html.innerHTML = "lost";
     } else {
         html.className = "status-tie";
-        html.innerHTML = "tie";
     }
 }
 
@@ -158,7 +154,7 @@ Game.prototype.markWin = function() {
 }
 
 Game.prototype.restartGame = function() {
-    if (confirm('Game is going to be restarted.\nAre you sure?')) {
+    if (confirm('Sei sicuro di voler ricominciare?')) {
         // Dropdown value
         that.init();
         document.getElementById('game_board').className = "";

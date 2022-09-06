@@ -8,13 +8,13 @@
       content="Artificial Intelligence based on the Minimax- and α-β-Pruning principles."
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Connect 4</title>
+    <title>Forza 4</title>
     <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
     <div id="container">
-      <h1 class="header-text">Connect 4</h1>
-      <p class="text subheader-text">Good Luck!</p>
+      <h1 class="header-text">Forza 4</h1>
+      <p class="text subheader-text">Buona Fortuna!</p>
 
       <div class="box-left">
         <table id="game_board" cellpadding="0"></table>
@@ -24,10 +24,10 @@
         <div id="options">
           <p>
             <button class="save" onclick="goHome()" type="submit">
-                Exit
+                Esci
               </button>
             <button class="save" onclick="Game.restartGame();" type="submit">
-              Restart game
+              Ricomincia
             </button>
           </p>
         </div>
@@ -39,6 +39,27 @@
         <p  id="player2-name"></p>
         <p id="player2-points">0</p>
       </div>
+      <br><br><br>
+      <div id="color-coins">
+          <p>Pedina Giocatore:
+              <select id="color-coins-human" onchange="changeColor()">
+           <option value="#333">Default</option>
+           <option value="-webkit-linear-gradient(left,red,orange,yellow,green,blue,indigo,violet)">Arcobaleno</option>
+           <option value="linear-gradient(to right, red , yellow)">Tramonto</option>
+           <option value="radial-gradient(circle, red, yellow, green)">Circle</option>
+           <option value="conic-gradient(red 0deg, red 90deg, yellow 90deg, yellow 180deg, green 180deg, green 270deg, blue 270deg)">Old Style</option>
+           <option value="repeating-conic-gradient(red 0deg 10deg, yellow 10deg 20deg, blue 20deg 30deg)">Clown</option>
+          </select></p>
+          <p>Pedina AI:
+              <select  id="color-coins-ai"  onchange="changeColor()">
+                  <option value="#DC143C">Default</option>
+                  <option value="-webkit-linear-gradient(left,red,orange,yellow,green,blue,indigo,violet)">Arcobaleno</option>
+                  <option value="linear-gradient(to right, red , yellow)">Tramonto</option>
+                  <option value="conic-gradient(red 0deg, red 90deg, yellow 90deg, yellow 180deg, green 180deg, green 270deg, blue 270deg)">Old Style</option>
+                  <option value="repeating-conic-gradient(red 0deg 10deg, yellow 10deg 20deg, blue 20deg 30deg)">Clown</option>
+                 </select>
+          </p>
+         </div>
     </div>
 
     <script src="../js/util.js"></script>

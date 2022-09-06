@@ -1,45 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
-    <head>
-        <meta charset="utf-8"/>
-        <link rel="stylesheet" href="css/bootstrap.min.css" />
-        <title>Forza 4</title>
-        <script src="js/util.js"></script>
-
-    </head>
-
-    <body>
-        <div class="container">
-            <h1>Forza 4!</h1>
-            <hr />
-
-            <span id="error"></span>
-
-            <span id="first_page">
-
-              <h2 class="d-inline-block">Player vs Player</h2>
-              <div class="text-right d-inline-block"> 
-                <input type="text" id="player1" placeholder="Giocatore 1" style="margin-right:20px;"/>
-                <input type="text" id="player2" placeholder="Giocatore 2" style="margin-right:20px;"/>
-                <a  class="btn btn-default" onclick="initPvpIndex();" id="button">Play!</a>
-              </div>
-
-              <br />
-              <hr />
-              <br />
-
-              <h2 class="d-inline-block">Player vs Bot</h2>
-              <div class="text-right d-inline-block">
-                <input type="text" id="player" placeholder="Giocatore 1" style="margin-right:20px;"/>
-                <a   class="btn btn-default" onclick="initPvbIndex();" id="button">Play!</a>
-              </div>
-
-              <br />
-              <hr />
-
-            </span>
+<head>
+    <meta charset = 'utf-8'>
+    <link href = "css/styles2.css" rel = "stylesheet" type = "text/css">
+    <link href = "css/style.css" rel = "stylesheet" type = "text/css">
+    <script src="js/prova.js"></script>
+    <script src="js/util.js"></script>
+</head>
+<body>
+<div class="grid">
+    <!--Left side-->
+    <div id="west" class="column effect-hover">
+        <div class="content">
+            <i class="fa fa-venus" aria-hidden="true"></i>
+            <h2>Multi <span>Player</span></h2>
+            <div class="text-right d-inline-block divgiocatori">
+                <input class="robbetta" type="text" id="player1" placeholder="Giocatore 1" style="margin-right:20px;"/>
+                <input class="robbetta" type="text" id="player2" placeholder="Giocatore 2" style="margin-right:20px;"/>
+                <button class="buttonsx" onclick="initPvpIndex();">Play!</button>
+            </div>
         </div>
-    </body>
+    </div>
+    <!--Right side-->
+    <div id="east" class="column effect-hover">
+        <div class="content">
+            <i class="fa fa-mars" aria-hidden="true"></i>
+            <h2>Giocatore <span>Singolo</span></h2>
+            <div class="text-right d-inline-block divgiocatori" >
+                <input class="robbetta" type="text" id="player" placeholder="Giocatore" style="margin-right:20px;"/>
+                <button   class="buttondx" onclick="initPvbIndex();">Play!</button>
+            </div>
+        </div>
+    </div>
+    <!--Logo-->
+    <div class="logo">
+        FORZA4
+    </div>
 
-</html>
+</div>
+</div>
+</body>

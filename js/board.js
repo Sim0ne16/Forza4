@@ -40,6 +40,7 @@ Board.prototype.isFinished = function(depth, score) {
 Board.prototype.place = function(column) {
     // Check if column valid
     // 1. not empty 2. not exceeding the board size
+    changeColor();
     if (this.field[0][column] == null && column >= 0 && column < this.game.columns) {
         // Bottom to top
         for (var y = this.game.rows - 1; y >= 0; y--) {
@@ -131,9 +132,9 @@ Board.prototype.score = function() {
     // [ ][x][x][ ][ ][ ][ ] 4
     // [ ][ ][x][ ][ ][ ][ ] 5
     for (var row = 0; row < this.game.rows - 3; row++) {
-        // Für jede Column überprüfen
+        // Check every column
         for (var column = 0; column < this.game.columns; column++) {
-            // Die Column bewerten und zu den Punkten hinzufügen
+            // Rate the column and add to the points
             var score = this.scorePosition(row, column, 1, 0);
             if (score == this.game.score) return this.game.score;
             if (score == -this.game.score) return -this.game.score;

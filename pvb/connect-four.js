@@ -86,7 +86,7 @@ Game.prototype.place = function(column) {
         }
 
         if (!that.board.place(column)) {
-            return alert("Invalid move!");
+            return alert("Mossa non consentita !");
         }
 
         that.round = that.switchRound(that.round);
@@ -114,8 +114,8 @@ Game.prototype.generateComputerDecision = function() {
             that.place(ai_move[0]);
 
             // Debug
-            document.getElementById('ai-column').innerHTML = 'Column: ' + parseInt(ai_move[0] + 1);
-            document.getElementById('ai-score').innerHTML = 'Score: ' + ai_move[1];
+            document.getElementById('ai-column').innerHTML = 'Colonna: ' + parseInt(ai_move[0] + 1);
+            document.getElementById('ai-score').innerHTML = 'Punteggio: ' + ai_move[1];
             document.getElementById('ai-iterations').innerHTML = that.iterations;
 
             document.getElementById('loading').style.display = "none"; // Remove loading message
@@ -206,7 +206,7 @@ Game.prototype.updateStatus = function() {
     if (that.board.score() == -that.score) {
         that.status = 1;
         that.markWin();
-        alert("You have won!");
+        alert("Hai vinto! 🤩");
         var scoreTrack = parseInt(document.getElementById("player-points").innerHTML);
         scoreTrack += 1;
         document.getElementById("player-points").innerHTML = scoreTrack;
@@ -216,7 +216,7 @@ Game.prototype.updateStatus = function() {
     if (that.board.score() == that.score) {
         that.status = 2;
         that.markWin();
-        alert("You have lost!");
+        alert("Hai perso! 😬");
         var scoreTrack = parseInt(document.getElementById("ai-points").innerHTML);
         scoreTrack += 1;
         document.getElementById("ai-points").innerHTML = scoreTrack;
@@ -225,22 +225,22 @@ Game.prototype.updateStatus = function() {
     // Tie
     if (that.board.isFull()) {
         that.status = 3;
-        alert("Tie!");
+        alert("Pareggio! 🙄");
     }
 
     var html = document.getElementById('status');
     if (that.status == 0) {
         html.className = "status-running";
-        html.innerHTML = "running";
+        html.innerHTML = "giocando..";
     } else if (that.status == 1) {
         html.className = "status-won";
-        html.innerHTML = "won";
+        html.innerHTML = "VINTO";
     } else if (that.status == 2) {
         html.className = "status-lost";
-        html.innerHTML = "lost";
+        html.innerHTML = "PERSO";
     } else {
         html.className = "status-tie";
-        html.innerHTML = "tie";
+        html.innerHTML = "PAREGGIO";
     }
 }
 
@@ -253,7 +253,7 @@ Game.prototype.markWin = function() {
 }
 
 Game.prototype.restartGame = function() {
-    if (confirm('Game is going to be restarted.\nAre you sure?')) {
+    if (confirm('Sei sicuro di voler ricominciare?')) {
         // Dropdown value
         var difficulty = document.getElementById('difficulty');
         var depth = difficulty.options[difficulty.selectedIndex].value;
@@ -263,8 +263,8 @@ Game.prototype.restartGame = function() {
         that.init();
         document.getElementById('ai-iterations').innerHTML = "?";
         document.getElementById('ai-time').innerHTML = "?";
-        document.getElementById('ai-column').innerHTML = "Column: ?";
-        document.getElementById('ai-score').innerHTML = "Score: ?";
+        document.getElementById('ai-column').innerHTML = "Colonna: ?";
+        document.getElementById('ai-score').innerHTML = "Punteggio: ?";
         document.getElementById('game_board').className = "";
         that.updateStatus();
     }
@@ -274,10 +274,12 @@ Game.prototype.restartGame = function() {
  * Start game
  */
 function initPvb() {
-    document.getElementById("player-name").innerHTML = localStorage.getItem('player') + " score:";
+    document.getElementById("player-name").innerHTML = localStorage.getItem('player') + " punteggio:";
     window.Game = new Game();
 }
 
 window.onload = function() {
     initPvb()
 };
+
+
